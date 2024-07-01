@@ -19,7 +19,7 @@ export default function App() {
       <Fish position={[-1.5, 0.5, 0.5]} scale={0.10} rotation={[0,Math.PI,0.0]}></Fish>
       <Fish position={[-1.6, 0.6, 1]} scale={0.03} rotation={[0,Math.PI,0.0]}></Fish>
       <Fish position={[-1.7, 0.4, 1]} scale={0.02} rotation={[0,Math.PI,0.0]}></Fish>
-      <Wheel position={[-1.5,-0.5,-0.5]} scale={0.21} rotation={[0,0,0]}></Wheel>
+      <Wheel position={[-1.5,-0.5,-0.5]} scale={0.21} rotation={[Math.PI/34,0,0]}></Wheel>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.51, 0]} scale={100}>
         <planeGeometry />
         <meshLambertMaterial color="#353535" />
@@ -38,7 +38,7 @@ function Postpro() {
       <BrightnessContrast brightness={0} contrast={0.25} />
       <WaterEffect factor={0.75} />
       <TiltShift2 samples={6} blur={0.5} />
-      <Bloom mipmapBlur luminanceThreshold={0} intensity={9} />
+      <Bloom mipmapBlur luminanceThreshold={0} intensity={8} />
       <ToneMapping />
     </EffectComposer>
   )

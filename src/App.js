@@ -38,7 +38,7 @@ function Postpro() {
       <BrightnessContrast brightness={0} contrast={0.25} />
       <WaterEffect factor={0.75} />
       <TiltShift2 samples={6} blur={0.5} />
-      <Bloom mipmapBlur luminanceThreshold={0} intensity={8} />
+      <Bloom mipmapBlur luminanceThreshold={0} intensity={6} />
       <ToneMapping />
     </EffectComposer>
   )

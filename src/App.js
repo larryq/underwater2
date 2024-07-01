@@ -15,6 +15,7 @@ export default function App() {
       </AccumulativeShadows>
       <Helmet position={[1.25, -.445, -1.15]} scale={0.35} rotation={[Math.PI/6,Math.PI,0.0]}></Helmet>
       <Fish position={[1.5, .225, 1]} scale={0.15}></Fish>
+      <Fish position={[0.95, -0.30, 0]} scale={0.08} rotation={[Math.PI/12,Math.PI/1.5,0]}></Fish>
       <Fish position={[-1.5, 0.5, 0.5]} scale={0.10} rotation={[0,Math.PI,0.0]}></Fish>
       <Fish position={[-1.6, 0.6, 1]} scale={0.03} rotation={[0,Math.PI,0.0]}></Fish>
       <Fish position={[-1.7, 0.4, 1]} scale={0.02} rotation={[0,Math.PI,0.0]}></Fish>
@@ -53,7 +54,7 @@ function Caustics(props) {
 export function TreasureChest(props) {
   const { nodes, materials } = useGLTF('/treasure_chest.glb')
   return (
-    <group {...props} dispose={null}>
+<group {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
@@ -84,7 +85,8 @@ export function TreasureChest(props) {
         receiveShadow
         geometry={nodes.Cylinder001.geometry}
         material={materials['Material.001']}
-        position={[-0.216, 0.604, 2.503]}
+        position={[-1.106, -0.849, 2.503]}
+        rotation={[-0.519, 0, 0]}
         scale={0.152}
       />
       <mesh
@@ -466,6 +468,24 @@ export function TreasureChest(props) {
         position={[0.698, -0.87, -3.438]}
         scale={0.152}
       />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cylinder005.geometry}
+        material={materials['Material.001']}
+        position={[-1.08, -0.87, -2.251]}
+        rotation={[-Math.PI, 0.86, -Math.PI]}
+        scale={0.152}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.diamond_1006.geometry}
+        material={materials.diamond}
+        position={[-1.107, -1.01, 0.652]}
+        rotation={[2.229, 0.22, 0.165]}
+        scale={0.181}
+      />
     </group>
   )
 }
@@ -473,7 +493,7 @@ export function TreasureChest(props) {
 export function Helmet(props) {
   const { nodes, materials } = useGLTF('/underwater_diver_helmet.glb')
   return (
-    <group {...props} dispose={null}>
+<group {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
